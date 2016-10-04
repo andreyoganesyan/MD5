@@ -5,15 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MD5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="700" Width="600">
     <Grid>
-        <Button x:Name="browseBtn" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="161,96,0,0" Click="browseBtn_Click"/>
-        <Button x:Name="calcHashBtn" Content="Calc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="268,96,0,0" Click="calcHashBtn_Click"/>
-        <TextBox x:Name="outputLbl"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,141,0,0" FontFamily="Courier New" Width="257"/>
-        <TextBox x:Name="outputLbl2"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,182,0,0" FontFamily="Courier New" Width="257" Height="21"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Margin="161,68,0,0"/>
-        <Label x:Name="outputLbl3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,167,0,0"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="161,220,0,0" Width="269" Height="77"/>
+        <Button x:Name="browseBtn" Content="Browse" VerticalAlignment="Top" Margin="0,10,50,0" Click="browseBtn_Click" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="folderPathTB" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="50,8,140,0"/>
+        <DataGrid x:Name="hashesDataGrid" Margin="50,60,50,25" HorizontalAlignment="Stretch" />
 
     </Grid>
 </Window>

@@ -26,6 +26,8 @@ namespace MD5
         string[] files;
         MD5HashMaker md5HashMaker = new MD5HashMaker();
         FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+        DataGridFiller dataGridFiller = new DataGridFiller();
+        DuplicatesFinder duplicateFinder = new DuplicatesFinder();
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +38,9 @@ namespace MD5
 
             folderBrowserDialog.ShowDialog();
             files = Directory.GetFiles(folderBrowserDialog.SelectedPath);
-            outputLbl2.Text = String.Concat(files);
+            folderPathTB.Text = folderBrowserDialog.SelectedPath;
+            dataGridFiller.Fill(hashesDataGrid, duplicateFinder.findDuplicates(folderBrowserDialog.SelectedPath));
+
             
         }
 
