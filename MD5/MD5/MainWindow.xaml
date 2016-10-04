@@ -8,8 +8,8 @@
         Title="MainWindow" Height="700" Width="600">
     <Grid>
         <Button x:Name="browseBtn" Content="Browse" VerticalAlignment="Top" Margin="0,10,50,0" Click="browseBtn_Click" HorizontalAlignment="Right" Width="75"/>
-        <TextBox x:Name="folderPathTB" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="50,8,140,0"/>
-        <DataGrid x:Name="hashesDataGrid" Margin="50,60,50,25" HorizontalAlignment="Stretch" />
+        <TextBox x:Name="folderPathTB" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="50,8,140,0" IsReadOnly="True"/>
+        <DataGrid x:Name="hashesDataGrid" Margin="50,60,50,25" HorizontalAlignment="Stretch" FontFamily="Courier New" />
 
     </Grid>
 </Window>
