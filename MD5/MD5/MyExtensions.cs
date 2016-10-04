@@ -9,7 +9,7 @@ namespace MD5
 {
     static class MyExtensions
     {
-        public static byte[] ReadBytes(this FileStream fileStream)
+        public static byte[] ReadBytes(this Stream fileStream)
         {
             byte[] bytes = new byte[fileStream.Length];
             for (long i = 0; i < fileStream.Length; i++)
@@ -20,7 +20,7 @@ namespace MD5
         }
         public static UInt32 ShiftLeftCircularly(this UInt32 x, int numOfBits)
         {
-            return x << numOfBits | x >> (32 - numOfBits);
+            return (x << numOfBits) | (x >> (32 - numOfBits));
         }
     }
 }
